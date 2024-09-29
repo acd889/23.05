@@ -15,13 +15,15 @@
 
 # Add a feed source
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git golang https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang' >>feeds.conf.default
 
 # 删除重复包
 
 rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/packages/lang/golang
 
 # 更换最新的golang版本
-git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+
 
 # mosdns
 rm -rf feeds/packages/net/v2ray-geodata
