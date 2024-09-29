@@ -21,8 +21,8 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 rm -rf feeds/luci/applications/luci-app-passwall
 
 # 更换最新的golang版本
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
 # mosdns
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
